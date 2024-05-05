@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// @ts-ignore
 export default defineNuxtConfig({
   devtools: { enabled: false },
+
   alias:{
     '@': '/<rootDir>'
   },
@@ -8,7 +10,16 @@ export default defineNuxtConfig({
     plugins:{
       autoprefixer:{}
     }
-  }
+  },
 
-
+  app: {
+    head: {
+      link: [
+        {
+          rel: "icon",
+          href: "https://cn.vuejs.org/logo.svg",
+        },
+      ],
+    },
+  },
 })
